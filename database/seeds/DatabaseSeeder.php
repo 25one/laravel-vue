@@ -1,9 +1,9 @@
 <?php
 
 use Illuminate\Database\Seeder;
-//use App\Models\Product;
-//use App\Models\Cart;
-//use App\Models\Comment;
+use App\Models\Product;
+use App\Models\Cart;
+use App\Models\Comment;
 use App\Models\Size;
 
 class DatabaseSeeder extends Seeder
