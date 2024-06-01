@@ -104,9 +104,10 @@ class ProductRepository
           $sumRating += $comment->rating;   
        }
 
-       $ratingComments = $sumRating / $countComments; 
+       if ($countComments) $ratingComments = $sumRating / $countComments; 
+       else $ratingComments = 0;
 
-       return ['ratingComments' => $ratingComments, 'countComments' => $countComments];
+       return ['ratingComments' => round($ratingComments, 2), 'countComments' => $countComments];
     }   
     
     /**
